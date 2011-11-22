@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="" />
+
+
+		<put-attribute name="left" value="" />
+		<put-attribute name="right" value="/WEB-INF/views/right.jsp" />
+
+	</definition>
+
+	<definition name="home" extends="base.definition">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="left" value="/WEB-INF/views/home.jsp" />
+
+	</definition>
+
+	<!-- Product Batch Module -->
+	<definition name="leoSplash/productBatch/new" extends="base.definition">
+		<put-attribute name="title" value="Product Batch Registration" />
+		<put-attribute name="left"
+			value="/WEB-INF/views/leoSplash/productBatch/registerProductBatch.jsp" />
+
+	</definition>
+	<definition name="leoSplash/productBatch/show" extends="base.definition">
+		<put-attribute name="title" value="Product Batch Registration" />
+		<put-attribute name="left"
+			value="/WEB-INF/views/leoSplash/productBatch/showMetaInformationTypes.jsp" />
+
+	</definition>
+
+	<!-- Meta Information Types Module -->
+	<definition name="leoSplash/metaInformationTypes/new" extends="base.definition">
+		<put-attribute name="title" value="Meta Information Type Registration" />
+		<put-attribute name="left"
+			value="/WEB-INF/views/leoSplash/metaInformationTypes/registerMetaInformationTypes.jsp" />
+
+
+	</definition>
+    <definition name="leoSplash/metaInformationTypes/edit/*" extends="base.definition">
+		<put-attribute name="title" value="Meta Information Type Edit" />
+		<put-attribute name="left"
+			value="/WEB-INF/views/leoSplash/metaInformationTypes/editMetaInformationTypes.jsp" />
+
+
+	</definition>
+	<definition name="leoSplash/metaInformationTypes/show/*" extends="base.definition">
+		<put-attribute name="title" value="Meta Information Type Registration" />
+		<put-attribute name="left"
+			value="/WEB-INF/views/leoSplash/metaInformationTypes/showMetaInformationTypes.jsp" />
+
+	</definition>
+
+    <definition name="listMetaInformationTypes" extends="base.definition">
+		<put-attribute name="title" value="Meta Information Type List" />
+		<put-attribute name="left"
+			value="/WEB-INF/views/leoSplash/metaInformationTypes/listMetaInformationTypes.jsp" />
+
+	</definition>
+
+
+    <definition name="internalError" extends="base.definition">
+            <put-attribute name="title" value="Internal Error Occurred" />
+            <put-attribute name="left"
+                value="/WEB-INF/views/view_messages/internalError.jsp" />
+
+    </definition>
+
+
+    <definition name="noResultFound" extends="base.definition">
+            <put-attribute name="title" value="No result found" />
+            <put-attribute name="left"
+                value="/WEB-INF/views/view_messages/noResultFound.jsp" />
+
+    </definition>
+
+
+
+</tiles-definitions>
