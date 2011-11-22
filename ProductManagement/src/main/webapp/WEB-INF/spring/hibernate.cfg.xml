@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- We're using MySQL database so the dialect needs to MySQL as well -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<!-- Enable this to see the SQL statements in the logs -->
+		<property name="show_sql">true</property>
+		<!-- This will update our existing database.-->
+		<!--  <property name="hbm2ddl.auto">update</property>-->
+		<property name="hibernate.search.default.directory_provider">filesystem </property>
+
+		<property name="hibernate.search.default.indexBase">/var/lucene/indexes</property>
+	</session-factory>
+</hibernate-configuration>
